@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Machine Game</title>
+    <style>
+        .main-container{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 5em;
+        }
+
+        .money{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        .slots > div{
+            width:5em;
+            height:5em;
+            /* border: 1px solid black; */
+        }
+
+        .slots{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        #slot1, #slot2, #slot3{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            font-size: 5em;
+        }
+
+        .spin{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 1em;
+        }
+        
+        .result{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="money">
+            <h1>Money: <span id="money">0</span></h1>
+        </div>
+
+        <div class="slots">
+            <div id="slot1"></div>
+            <div id="slot2"></div>
+            <div id="slot3"></div>
+        </div>
+
+        <div id="container" class= "spin">
+            <button id = "button" onclick="spin()">Spin!</button>
+            <button id="playButton" style="display: none" onclick="spin()">Play Again?</button>
+        </div>
+
+        <div class = "result">
+            <h1 id="outcome"></h1>
+        </div>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>
