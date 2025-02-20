@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slot Machine Game</title>
+    <title>Chilie's and Dragons - Slot Machine Game</title>
     <style>
+        body{
+            background-color: #FFDFB9 ;
+        }
         .main-container{
             display: flex;
             justify-content: center;
@@ -15,14 +18,13 @@
         .money{
             display: flex;
             justify-content: center;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
         }
         
         .slots > div{
             width:5em;
             height:5em;
-            /* border: 1px solid black; */
         }
 
         .slots{
@@ -38,14 +40,24 @@
             flex-direction: row;
             align-items: center;
             font-size: 5em;
+            background-color: #A4193D;
+            border: 1px black solid;
+            margin: .5em;
+
         }
 
         .spin{
             display: flex;
             justify-content: center;
-            flex-direction: row;
-            align-items: center;
             margin-top: 1em;
+        }
+
+        #button, #playButton{
+            padding:1em;
+            width: 20%;
+            font-size: larger;
+            background-color:#A4193D;
+            color: white;
         }
         
         .result{
@@ -61,6 +73,7 @@
     <div class="main-container">
         <div class="money">
             <h1>Money: <span id="money">0</span></h1>
+            <h1 id="moneyMsg"></h1>
         </div>
 
         <div class="slots">
@@ -79,5 +92,7 @@
         </div>
     </div>
     <script src="script1.js"></script>
+    <audio src="coin-recieved-230517.mp3" id="win"></audio>
+    <audio src="marimba-lose-250960.mp3" id="lose"></audio>
 </body>
 </html>
