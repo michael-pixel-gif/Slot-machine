@@ -1,6 +1,6 @@
 let startingCash = 1000;
 let spinCount = 0;
-const faces = ['🐲','🌶️'];
+const faces = ['🐲','🌶️','🔥'];
 
 function slot1(){
     return faces[Math.floor(Math.random()*faces.length)]
@@ -30,11 +30,13 @@ function spin(){
     const outcome = document.getElementById("outcome");
     const money = document.getElementById("money");
     const moneyMsg = document.getElementById("moneyMsg");
+    moneyMsg.style.display = 'none'
 
     if(spinCount % 5 == 0){
         startingCash += 200;
         console.log("You win 200")
         moneyMsg.innerHTML = 'You win $200';
+        moneyMsg.style.display = 'block';
     }
 
     if(slot_1 == slot_2 && slot_1 == slot_3){
@@ -43,7 +45,6 @@ function spin(){
         outcome.innerHTML = `You win!`;
         money.innerHTML = `${startingCash}`;
         win.play();
-
         
     } else {
         startingCash -= 100;
