@@ -5,7 +5,7 @@ A simple slot machine game where everytime you press "Spin"
 you win or lose money based on the icons displayed, which are random.
 
 ## HOW TO PLAY
-1. You start with $1000 and gamble 200$ each time (I plan to add a betting system)
+1. You start with $1000 and gamble 200 each time (I plan to add a betting system)
 2. Press the "Spin!" button to spin the wheel
 3. If you get three in a row ex: 🔥🔥🔥
 4. If you dont get three in a row you lose 100$
@@ -52,5 +52,5 @@ if(slot_1 == slot_2 && slot_1 == slot_3){
 
 ## Creidts
 
-Created by: Michael Rodriguez
-For: West-MEC Coding Class
+- Created by: Michael Rodriguez
+- For: West-MEC Coding Class
