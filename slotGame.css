@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-color: #FFDFB9 ;
+    height: 100vh;
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding:1em;
+}
+
+.introduction{
+    text-align: center;
+    font-size: larger;
+}
+
+#title{
+    
+}
+
+.introduction > ul{
+    list-style-type:none;
+}
+
+li{
+    margin:.5em;
+}
+
+.money{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slots > div{
+    width:5em;
+    height:5em;
+}
+
+.slots{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+#slot1, #slot2, #slot3{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    font-size: 5em;
+    background-color: #A4193D;
+    border: 1px black solid;
+    margin: .5em;
+
+}
+
+.spin{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+#button, #playButton{
+    padding:.5em;
+    width: 7em;
+    font-size: larger;
+    background-color:#A4193D;
+    color: white;
+}
+
+.result{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+#moneyMsg{
+    text-align: center;
+}

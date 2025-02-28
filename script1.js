@@ -35,23 +35,23 @@ function spin(){
     if(spinCount % 5 == 0){
         startingCash += 200;
         console.log("You win 200")
-        moneyMsg.innerHTML = 'You win $200';
+        moneyMsg.innerHTML = 'You won $200!';
         moneyMsg.style.display = 'block';
     }
 
     if(slot_1 == slot_2 && slot_1 == slot_3){
         let win = document.getElementById('win');
         startingCash += 200;
-        outcome.innerHTML = `You win!`;
+        outcome.innerHTML = `You Won!`;
         money.innerHTML = `${startingCash}`;
         win.play();
         
     } else {
         startingCash -= 100;
         let lose = document.getElementById('lose');
-       outcome.innerHTML = `You Lose!`;
-       money.innerHTML = `${startingCash}`;
-       lose.play();
+        outcome.innerHTML = `You Lost!`;
+        money.innerHTML = `${startingCash}`;
+        lose.play();
     }
 
     if (startingCash <= 0){
