@@ -49,8 +49,8 @@ function spin(){
         
             if(spinCount % 5 == 0){
                 startingCash += 100;
-                console.log("You win 200")
-                moneyMsg.innerHTML = 'You won $200!';
+                console.log("You win 100")
+                moneyMsg.innerHTML = 'You won $100!';
                 moneyMsg.style.display = 'block';
             };
         
@@ -83,5 +83,4 @@ function playAgain(){
     startingCash = 1000;
     document.getElementById('button').style.display = 'none';
     document.getElementById('playButton').style.display = 'block';
-    // document.getElementById('gamble').value = "";
 };
