@@ -22,7 +22,7 @@ function spin(){
 
     // cant allow players to bet whatever they want
     let number = Number(document.getElementById('gamble').value);
-    if(number >= 1001 || number === '' || number <= 1)
+    if(number >= 1001 || number === '' || number < 1)
         return window.alert("Your bet has to between 1 and 1000");
 
     if(number > startingCash)
