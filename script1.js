@@ -1,6 +1,6 @@
 let startingCash = 1000; // This is the amount you start with at the beginning of every game.
 let spinCount = 0; // to log the amount of spins you make
-const faces = ['🐲','🌶️',]; // the faces shown on each slot
+const faces = ['🐲','🌶️','🔥']; // the faces shown on each slot
 
 document.getElementById("money").innerHTML = `${startingCash}`;
 
