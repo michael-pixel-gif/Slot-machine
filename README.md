@@ -35,6 +35,7 @@ The project consists of three files:
 
 ## CODE EXAMPLE
 
+```
 if(slot_1 == slot_2 && slot_1 == slot_3){
         let win = document.getElementById('win');
         startingCash += 200;
@@ -49,8 +50,9 @@ if(slot_1 == slot_2 && slot_1 == slot_3){
         money.innerHTML = `${startingCash}`;
         lose.play();
     }
+```
 
-## Creidts
+## Creidits
 
 - Created by: Michael Rodriguez
 - For: West-MEC Coding Class

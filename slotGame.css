@@ -1,31 +1,32 @@
 *{
     margin: 0;
     padding:0;
-}
+} /*Applies to all elements*/
+
 body{
-    background-color: #FFDFB9 ;
+    background-color: #FFDFB9;
     height: 100vh;
 }
-.main-container{
+.main-container{ 
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding:1em;
     height:auto;
-}
+} /*This is where everything happens*/
 
 .introduction{
     text-align: center;
     font-size: larger;
-}
+} /*The instructions*/
 
 p{
-    margin: .5em 0 .5em 0
-}
+    margin: .5em 0 .5em 0;
+} /*Also the instructions*/
 
 #instruction{
     text-decoration: underline;
-}
+} /*"How to play"*/
 
 .introduction > ul{
     list-style-type:none;
@@ -40,7 +41,7 @@ li{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-}
+} /*the money display*/
 
 .slots > div{
     width:5em;
@@ -52,7 +53,7 @@ li{
     justify-content: center;
     flex-direction: row;
     align-items: center;
-}
+} /*div where the slots are contained*/
 
 #slot1, #slot2, #slot3{
     display: flex;
@@ -70,12 +71,12 @@ li{
     justify-content: center;
     height:4em;
     justify-content: space-around;
-}
+} /*Spin button*/
 
 #spacer{
     width: 160px;
     visibility: hidden;
-}
+} /*To help even out the spin button*/
 
 #button, #playButton{
     width: 7em;
@@ -84,29 +85,31 @@ li{
     color: white;
     height: 1.5em;
     margin-top: 1em;
-}
+} /*Both spon and play again button*/
 
 .result{
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
-}
+} /*To display if you won or lost*/
 
 #moneyMsg{
     text-align: center;
-}
+} /*Displays the bonus*/
 
 #gamble{
     margin: 1em 0 0 3em;
     justify-content: right;
     height: 2em;
-}
+} /*Betting amount*/
 
 @media screen and (max-width:606px){
+    /*Turns everything into a column*/
     .main-container{
         flex-direction: column;
     }
+
     #container{
         flex-direction: column;
         align-items: center;
