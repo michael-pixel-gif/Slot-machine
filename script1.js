@@ -1,30 +1,38 @@
-let startingCash = 1000;
-let spinCount = 0;
-const faces = ['🐲','🌶️','🔥'];
+let startingCash = 1000; // This is the amount you start with at the beginning of every game.
+let spinCount = 0; // to log the amount of spins you make
+const faces = ['🐲','🌶️']; // the faces shown on each slot
 
 document.getElementById("money").innerHTML = `${startingCash}`;
 
 function slot1(){
-        return faces[Math.floor(Math.random()*faces.length)];
+    return faces[Math.floor(Math.random()*faces.length)];
 };
 function slot2(){
     return faces[Math.floor(Math.random()*faces.length)];
 };
 function slot3(){
-    return faces[Math.floor(Math.random()*faces.length)];
+    return faces[Math.floor(Math.random()*faces.length)]; 
+    // these will pick a random emoji from the array above once for each slot
 };
 
 function spin(){
     document.getElementById('button').style.display = 'block';
-    document.getElementById('playButton').style.display = 'none';
+    document.getElementById('playButton').style.display = 'none'; 
+    // There are two buttons, "spin" will always show while "play again will be hidden until player loses"
 
+    // cant allow players to bet whatever they want
     let number = Number(document.getElementById('gamble').value);
-    if(number >= 1001 || number === '' || number <= 1)
-        return window.alert("Your bet has to between 1 and 1000");
+    if(number >= startingCash || number === '' || number < 100)
+        return alert(`Your bet has to between 100 and ${startingCash}`);
 
     if(number > startingCash)
         return alert("not enough cash");
 
+    if (startingCash <= 100){
+        return alert(`Your bet has to be between 1 and ${number}.`)
+    }
+
+    // this will interval each slot five times before stopping on the right one to cause a spinning affect
     let intervalCount = 0;
     let interval = setInterval(function(){
         intervalCount++;
@@ -36,7 +44,8 @@ function spin(){
             document.getElementById("slot3").innerHTML = slot_3;
             console.log(slot_1, slot_2, slot_3);
         
-         if(intervalCount >= 6){
+        // this will stop the interval after five times
+        if(intervalCount >= 6){
             clearInterval(interval);
 
             const outcome = document.getElementById("outcome");
@@ -46,12 +55,12 @@ function spin(){
             moneyMsg.style.display = 'none';
             spinCount++;
             console.log(spinCount);
-        
+            // every five spins will grant $100
             if(spinCount % 5 == 0){
                 startingCash += 100;
                 console.log("You win 100")
                 moneyMsg.innerHTML = 'You won $100!';
-                moneyMsg.style.display = 'block';
+                moneyMsg.style.display = 'block'; // this will let the message only display for the fifth spin
             };
         
             if(slot_1 == slot_2 && slot_1 == slot_3){
@@ -60,7 +69,7 @@ function spin(){
                 outcome.innerHTML = `You Won!`;
                 money.innerHTML = `${startingCash}`;
                 win.play();
-                
+            // this will check if the player won or lost
             } else {
                 startingCash -= number;
                 let lose = document.getElementById('lose');
@@ -75,12 +84,18 @@ function spin(){
                 return playAgain();
             };
         };
-    }, 200);
+    }, 200); // each interval will be 200 milliseconds
     document.getElementById("money").innerHTML = `${startingCash}`;
 };
-
+// when "play again" is pressed this will reset the game
 function playAgain(){
     startingCash = 1000;
     document.getElementById('button').style.display = 'none';
     document.getElementById('playButton').style.display = 'block';
 };
+
+document.getElementById("gamble").addEventListener("keydown", (event) => {
+    if(event.key === "Enter"){
+        event.preventDefault();
+    }
+})
