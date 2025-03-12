@@ -10,49 +10,48 @@
 <body>
     <div class="main-container">
         <div class="introduction">
-            <h1>Welcome To My Game:</h1><br>
+            <h1>Welcome To My Game:</h1><br> <!--The title-->
             <h2 id ="title">Chile's and Dragons</h2>
             <p>It is your classic slot machine game.</p>
-            <p id="instruction">How to play:</p>
+            <p id="instruction">How to play:</p> <!--The instructions-->
             <ul><b>
                 <li>- You start with $1000 and your custom to bet</li>
                 <li>- Press the "Spin!" button to spin the wheel</li>
-                <li>- If you get three in a row ex: 🔥🔥🔥 you win your bet</li>
+                <li>- If you get three in a row ex: 🐲🐲🐲 you win your bet</li>
                 <li>- If you dont get three in a row you lose your bet</li>
                 <li>- Note that every five spins you will win $100 to stay in the game</li>
                 <li>- You lose when you run out of money and have to press "Play Again?" restart</li>
                 <li>- Have fun!</li></b>
             </ul>
         </div>
-        <div class="money">
+        <div class="money"> <!--Money display-->
             <h1>Money:<span id="money">0</span></h1>
         </div>
 
-        <div class="slots">
+        <div class="slots"> <!--Where the slots will display-->
             <div id="slot1"></div>
             <div id="slot2"></div>
             <div id="slot3"></div>
         </div>
 
         <div id="container" class= "spin">
-            <button id="spacer"></button>
+            <button id="spacer"></button> <!--Used to help even out the spacing of the spin button-->
             <button id = "button" onclick="spin()">Spin!</button>
             <button id="playButton" style="display: none" onclick="spin()">Play Again?</button>
             <div class="betting">
                 <label for = "gamble">How much will you bet?</label><br>
-            <form>
+            <form> <!--Where the bet eill be input-->
                 <input type = "number" id="gamble" name = "gamble" min = "1" max = "1000" required>
             </form>
             </div>
         </div>
 
         <div class = "result">
-            <h3 id="outcome"></h3>
+            <h3 id="outcome"></h3> <!--This is to show if you won or lost-->
         </div>
-        <h3 id="moneyMsg"></h3>
-        <div class = "warning"></div>
+        <h3 id="moneyMsg"></h3> <!--This is to display when the bonus money is won-->
     </div>
-    <audio src="coin-recieved-230517.mp3" id="win"></audio>
-    <audio src="marimba-lose-250960.mp3" id="lose"></audio>
+    <audio src="coin-recieved-230517.mp3" id="win"></audio> <!--The winning sound-->
+    <audio src="marimba-lose-250960.mp3" id="lose"></audio> <!-- The losing sound-->
 </body>
 </html>

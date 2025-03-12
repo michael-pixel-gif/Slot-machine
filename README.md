@@ -7,7 +7,7 @@ you win or lose money based on the icons displayed, which are random.
 ## HOW TO PLAY
 1. You start with $1000 and gamble 200 each time (I plan to add a betting system)
 2. Press the "Spin!" button to spin the wheel
-3. If you get three in a row ex: 🔥🔥🔥
+3. If you get three in a row ex: 🐲🐲🐲
 4. If you dont get three in a row you lose 100$
 5. Note that every five spins you will win $200 to stay in the game
 6. You lose when you run out of money and have to press "Play Again?" restart
@@ -35,6 +35,7 @@ The project consists of three files:
 
 ## CODE EXAMPLE
 
+```
 if(slot_1 == slot_2 && slot_1 == slot_3){
         let win = document.getElementById('win');
         startingCash += 200;
@@ -49,8 +50,9 @@ if(slot_1 == slot_2 && slot_1 == slot_3){
         money.innerHTML = `${startingCash}`;
         lose.play();
     }
+```
 
-## Creidts
+## Creidits
 
 - Created by: Michael Rodriguez
 - For: West-MEC Coding Class
