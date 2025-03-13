@@ -22,14 +22,18 @@ function spin(){
 
     // cant allow players to bet whatever they want
     let number = Number(document.getElementById('gamble').value);
-    if(number >= startingCash || number === '' || number < 100)
-        return alert(`Your bet has to between 100 and ${startingCash}`);
-
-    if(number > startingCash)
-        return alert("not enough cash");
-
-    if (startingCash <= 100){
-        return alert(`Your bet has to be between 1 and ${number}.`)
+    if(number <= 0 || number === ""){
+        return alert(`You must bet a positive amount`);
+    }
+    if(startingCash > 100){ // Checks if your cash amount is greater than 100
+        // wont allow player to bet under 100 or over the amount of cash they have
+        if (number < 100 || number > startingCash){
+            return alert(`Your bet has to between 100 and ${startingCash}`);
+        }
+    }else {
+        if (number < 1 || number > startingCash){
+            return alert(`Your bet has to between 1 and ${startingCash}`);
+        }// if cash is under 100 will only allow player to bet from 1 to however much they have that is under 100
     }
 
     // this will interval each slot five times before stopping on the right one to cause a spinning affect
