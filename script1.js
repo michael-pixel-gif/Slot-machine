@@ -20,6 +20,12 @@ function spin(){
     document.getElementById('playButton').style.display = 'none'; 
     // There are two buttons, "spin" will always show while "play again will be hidden until player loses"
 
+document.getElementById("gamble").addEventListener("keydown", (event) => {
+    if(event.key === "Enter"){ 
+        event.preventDefault();
+    }
+}); // prevents from the enter key from being used
+
     // cant allow players to bet whatever they want
     let number = Number(document.getElementById('gamble').value);
     if(number <= 0 || number === ""){
@@ -97,9 +103,3 @@ function playAgain(){
     document.getElementById('button').style.display = 'none';
     document.getElementById('playButton').style.display = 'block';
 };
-
-document.getElementById("gamble").addEventListener("keydown", (event) => {
-    if(event.key === "Enter"){
-        event.preventDefault();
-    }
-})
